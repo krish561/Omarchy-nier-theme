@@ -1,94 +1,49 @@
+# NieR-Light — Omarchy Theme
 
-# ── USERNAME ──
-label {
-    monitor     =
-    text        = cmd[update:0] whoami | tr '[:lower:]' '[:upper:]' | sed 's/.*/[ & ]/'
-    color       = $font_color
-    font_size   = 34
-    font_family = JetBrainsMono Nerd Font SemiBold
-    position    = 0, 48
-    halign      = center
-    valign      = center
-    shadow_passes = 2
-    shadow_size = 1
-    shadow_color = rgba(0, 0, 0, 0.6)
-}
+A light theme for [Omarchy](https://omarchy.org) inspired by the canonical YoRHa CSS design language from NieR: Automata. Clean parchment tones, ink typography, and subtle grid texture across all surfaces.
 
+![Preview](preview.png)
 
-# ── Sanskrit subtitle ──
-label {
-    monitor     =
-    text        = यन्त्र · जागृत
-    color       = rgba(200, 184, 154, 0.5)
-    font_size   = 12
-    font_family = Noto Serif Devanagari Light
-    position    = 0, 10
-    halign      = center
-    valign      = center
-    shadow_passes = 0
-}
+## Palette
 
-# ── Top left ──
-label {
-    monitor     =
-    text        = SESSION LOCKED
-    color       = $font_color
-    font_size   = 11
-    font_family = JetBrainsMono Nerd Font Medium
-    position    = 30, -30
-    halign      = left
-    valign      = top
-    shadow_passes = 0
-}
+| Role | Hex |
+|---|---|
+| Background | `#d1cdb7` |
+| Ink / Text | `#454138` |
+| Parchment | `#dcd8c0` |
+| Mid tone | `#bab5a1` |
+| Error / Critical | `#8b2020` |
 
-# ── Top right ──
-label {
-    monitor     =
-    text        = cmd[update:1000] echo "$TIME  ·  $(date '+%Y / %m / %d')"
-    color       = $font_color
-    font_size   = 11
-    font_family = JetBrainsMono Nerd Font
-    position    = -30, -30
-    halign      = right
-    valign      = top
-    shadow_passes = 0
-}
+## Features
 
-# ── Bottom left ──
-label {
-    monitor     =
-    text        = cmd[update:0] printf "OMARCHY LINUX · HYPRLAND"
-    color       = rgba(200, 184, 154, 0.6)
-    font_size   = 10
-    font_family = JetBrainsMono Nerd Font
-    position    = 30, 30
-    halign      = left
-    valign      = bottom
-    shadow_passes = 0
-}
+- Waybar with grid texture background and YoRHa ink palette
+- Hyprlock lockscreen
+- Walker launcher with parchment grid background
+- Full palette across ghostty, btop, neovim (Kanagawa Lotus), swayosd, gtk
+- Fish shell and fzf colors
 
-# ── Bottom right ──
-label {
-    monitor     =
-    text        = cmd[update:0] uname -r | cut -d- -f1
-    color       = rgba(200, 184, 154, 0.6)
-    font_size   = 10
-    font_family = JetBrainsMono Nerd Font
-    position    = -30, 30
-    halign      = right
-    valign      = bottom
-    shadow_passes = 0
-}
+## Font
 
-# ── Bottom ticker ──
-label {
-    monitor     =
-    text        = SYSTEM SCAN · OK  ▸  MEMORY INTEGRITY · VERIFIED  ▸  SESSION LOCKED · SECURE  ▸  NETWORK UPLINK · STABLE  ▸
-    color       = rgba(200, 184, 154, 0.3)
-    font_size   = 9
-    font_family = JetBrainsMono Nerd Font
-    position    = 0, 12
-    halign      = center
-    valign      = bottom
-    shadow_passes = 0
-}
+This theme uses `Nimbus Sans` (Helvetica substitute) for a clean android UI feel matching the original NieR interface. Falls back to any sans-serif if unavailable.
+
+For monospace components, font follows your Omarchy font setting — change with `omarchy-font-set`.
+
+## Terminal Greeting
+
+A NieR-styled terminal greeting is included at `quickshell/nier-welcome.sh`. It displays an ASCII art header, system info, and the Sanskrit phrase `बलिदान परमो धर्म: · glory to mankind`.
+
+**Fish shell only.** Add to `~/.config/fish/config.fish`:
+
+```fish
+if status is-interactive
+    ~/.config/omarchy/current/theme/nier-welcome.sh
+end
+```
+
+Requires `figlet` for the ASCII art header (`yay -S figlet`). Without it the greeting will fail silently.
+
+## Credits
+
+- [samyns/Unit-3](https://github.com/samyns/Unit-3) — Quickshell widgets, NieR UI components, and original rice this theme is based on
+- [metakirby5/yorha](https://github.com/metakirby5/yorha) — Canonical NieR: Automata CSS design language and color palette
+

@@ -17,6 +17,17 @@ window#waybar {
   color: #454138;
 }
 
+#custom-omarchy {
+    color: #454138;
+    padding: 0 12px;
+    font-size: 14px;
+}
+
+#custom-omarchy:hover {
+    color: #8b2020;
+    background: rgba(69, 65, 56, 0.05);
+}
+
 /* WORKSPACES */
 #workspaces button {
   padding: 0 8px;
@@ -49,14 +60,14 @@ window#waybar {
   font-size: 10px;
 }
 
-/* MODULES RIGHT */
+/* SYSTEM MODULES */
 #network,
 #bluetooth,
 #pulseaudio,
 #backlight,
 #cpu,
+#memory,
 #battery,
-#custom-control,
 #clock {
   padding: 0 10px;
   color: rgba(69, 65, 56, 0.6);
@@ -71,6 +82,10 @@ window#waybar {
 
 #cpu {
   color: #8b2020;
+}
+
+#memory {
+    color: #5a5248;
 }
 
 #network {
@@ -103,16 +118,6 @@ window#waybar {
 
 #backlight {
   color: rgba(69, 65, 56, 0.6);
-}
-
-#custom-control {
-  color: rgba(69, 65, 56, 0.6);
-  padding: 0 14px;
-}
-
-#custom-control:hover {
-  color: #8b2020;
-  background: rgba(139, 32, 32, 0.08);
 }
 
 #mpris {

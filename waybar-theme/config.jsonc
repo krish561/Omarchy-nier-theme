@@ -4,24 +4,29 @@
   "height": 28,
   "spacing": 0,
   "modules-left": [
+    "custom/omarchy",
     "hyprland/workspaces",
     //"hyprland/window",
     "mpris",
   ],
   "modules-center": ["custom/ticker"],
   "modules-right": [
-    //"custom/player",
     "tray",
     "network",
     "bluetooth",
     "pulseaudio",
     "cpu",
-    //"memory",
+    "memory",
     "backlight",
     "battery",
-    "custom/control",
     "clock",
   ],
+  "custom/omarchy": {
+    "format": "<span font='omarchy'>\ue900</span>",
+    "on-click": "omarchy-menu",
+    "on-click-right": "xdg-terminal-exec",
+    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space",
+  },
   "tray": {
     //"icon-size": 14,
     "spacing": 8,
@@ -96,24 +101,11 @@
   },
 
   "custom/ticker": {
-    "exec": "echo 'यन्त्र·सक्रिय // SCANNING // बलिदान परमो धर्म: // SYS:ACTIVE // सर्व प्रणाली सामान्य // NR-2B@ARCH //'",
-    // "exec": "echo 'यन्त्र · सक्रिय// SCANNING // データ処// SYS:ACTIVE // NR-2B@ARCH // 全システム正常 // 起動完了 //'",
+    //"exec": "echo 'यन्त्र·सक्रिय // SCANNING // बलिदान परमो धर्म: // SYS:ACTIVE // सर्व प्रणाली सामान्य // NR-2B@ARCH //'",
+    "exec": "echo '接続中 // SCANNING // データ処理 // SYS:ACTIVE // NR-2B@ARCH // 全システム正常 // 起動完了 //'",
     "interval": 60,
     "format": "{}",
-  },
-
-  "custom/control": {
-    "format": "⏻",
-    "on-click": "qs ipc call ctrl toggle",
-    "tooltip": "Control Center",
-  },
-  "custom/player": {
-    "exec": "playerctl metadata --format '{{ artist }} // {{ title }}' 2>/dev/null || echo ''",
-    "interval": 2,
-    "format": "{}",
-    "on-click": "echo t >> /tmp/qs-toggle",
-    "on-click-right": "echo t >> /tmp/qs-front",
-    "max-length": 40,
+    //"max-length": 100, //Increase or Decrease to change ticker length
   },
   "mpris": {
     "format": "{artist} // {title}",

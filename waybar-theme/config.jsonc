@@ -102,7 +102,7 @@
 
   "custom/ticker": {
     //"exec": "echo 'यन्त्र·सक्रिय // SCANNING // बलिदान परमो धर्म: // SYS:ACTIVE // सर्व प्रणाली सामान्य // NR-2B@ARCH //'",
-    "exec": "echo '接続中 // SCANNING // データ処理 // SYS:ACTIVE // NR-2B@ARCH // 全システム正常 // 起動完了 //'",
+    "exec": "echo '// 接続中 // SCANNING // データ処理 // SYS:ACTIVE // NR-2B@ARCH // 全システム正常 // 起動完了 //'",
     "interval": 60,
     "format": "{}",
     //"max-length": 100, //Increase or Decrease to change ticker length

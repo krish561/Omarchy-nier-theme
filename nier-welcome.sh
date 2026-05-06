@@ -11,7 +11,7 @@ KERN=$(uname -r | cut -d'-' -f1)
 echo ""
 while IFS= read -r line; do
   printf "${ACC}    %s${RESET}\n" "$line"
-done < <(figlet -f slant "Krish")
+done < <(figlet -f slant "Omarchy")
 
 echo ""
 printf "${DIM}    ─────────────────────────────────────${RESET}\n"
@@ -19,6 +19,6 @@ printf "    ${DIM}node  ${RESET}${INK}${USER}@$HOSTNAME${RESET}\n"
 printf "    ${DIM}kern  ${RESET}${INK}${KERN}${RESET}\n"
 printf "    ${DIM}time  ${RESET}${INK}${HOUR}  ${NOW}${RESET}\n"
 printf "${DIM}    ─────────────────────────────────────${RESET}\n"
-printf "    ${DIM}बलिदान परमो धर्म:  ·  glory to mankind${RESET}\n"
+printf "    ${DIM}人類に栄光あれ  ·  glory to mankind${RESET}\n"
 printf "${DIM}    ─────────────────────────────────────${RESET}\n"
 echo ""

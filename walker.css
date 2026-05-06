@@ -1,0 +1,100 @@
+@define-color selected-text #dcd8c0;
+@define-color text           #454138;
+@define-color base           #d1cdb7;
+@define-color border         #454138;
+@define-color foreground     #454138;
+@define-color background     #d1cdb7;
+
+/* ===== Outer frame ===== */
+window .box-wrapper {
+  background-image:
+    linear-gradient(to right, rgba(204,200,177,0.8) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(204,200,177,0.8) 1px, transparent 1px);
+  background-size: 6px 6px;
+  background-color: #d1cdb7;
+  padding: 10px;
+  border: 3px solid #454138;
+  border-radius: 0px;
+  margin: 0;
+}
+
+/* ===== Inner frame ===== */
+window .content {
+  border: 2px solid #bab5a1;
+  padding: 4px;
+}
+
+/* ===== Search bar ===== */
+window .search-container {
+  background-color: #dcd8c0;
+  border: 2px solid #454138;
+  border-radius: 0px;
+  margin-bottom: 8px;
+}
+
+window .input {
+  color: #454138;
+  padding: 3px;
+  font-weight: 700;
+  font-family: Nimbus Sans;
+}
+
+window .placeholder {
+  color: #454138;
+  opacity: 0.4;
+  font-family: Nimbus Sans;
+}
+
+/* ===== List items ===== */
+child {
+  background: transparent;
+  padding: 2px;
+  margin: 0;
+  border: none;
+}
+
+/* ===== Hover ===== */
+child:hover {
+  background: #ccc8b1;
+}
+
+/* ===== Selected item ===== */
+child:selected {
+  background: #bab5a1;
+  border-radius: 0px;
+}
+
+/* ===== Icon ===== */
+child image {
+  margin-right: 10px;
+}
+
+/* ===== App name ===== */
+child label {
+  color: #454138;
+  font-weight: 800;
+  font-family: Nimbus Sans;
+}
+
+/* ===== Category text ===== */
+child label.secondary {
+  color: #6a6358;
+  font-style: italic;
+  font-weight: 400;
+  font-family: Nimbus Sans;
+}
+
+/* ===== Selected text colors ===== */
+child:selected label {
+  color: #1a1814;
+}
+
+child:selected label.secondary {
+  color: #454138;
+}
+
+/* Slimmer selection bar */
+child:selected {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}

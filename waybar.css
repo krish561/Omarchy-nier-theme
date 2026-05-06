@@ -1,0 +1,10 @@
+@define-color background      rgba(209, 205, 183, 0.95);
+@define-color waybarBg        rgba(209, 205, 183, 0.92);
+@define-color foreground      #454138;
+@define-color surface         #dcd8c0;
+@define-color inactive        #bab5a1;
+
+@define-color accent_orange   #7a6a3a;
+@define-color accent_green    #5a5248;
+@define-color accent_blue     #454138;
+@define-color accent_critical #8b2020;

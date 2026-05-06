@@ -1,0 +1,27 @@
+set -U background '#d1cdb7'
+set -U foreground '#454138'
+set -U cursor '#454138'
+set -U color0 '#d1cdb7'
+set -U color1 '#8b2020'
+set -U color2 '#454138'
+set -U color3 '#7a6a3a'
+set -U color4 '#454138'
+set -U color5 '#5a5248'
+set -U color6 '#6a6358'
+set -U color7 '#454138'
+set -U color8 '#bab5a1'
+set -U color9 '#8b2020'
+set -U color10 '#5a5248'
+set -U color11 '#7a6a3a'
+set -U color12 '#454138'
+set -U color13 '#5a5248'
+set -U color14 '#6a6358'
+set -U color15 '#1a1814'
+
+set -U fish_color_normal normal
+set -U fish_color_command '#454138'
+set -U fish_color_param '#6a6358'
+set -U fish_pager_color_completion
+set -U fish_pager_color_description $fish_color_quote '#7a6a3a'
+set -U fish_pager_color_progress brwhite --background='#bab5a1'
+set -U fish_color_history_current --bold

@@ -1,0 +1,159 @@
+@define-color background        #d1cdb7;
+@define-color foreground        #454138;
+
+/* Base colors */
+@define-color black             #d1cdb7;
+@define-color bright_black      #bab5a1;
+
+/* ANSI colors */
+@define-color red               #8b2020;
+@define-color green             #5a5248;
+@define-color yellow            #7a6a3a;
+@define-color blue              #454138;
+@define-color magenta           #5a5248;
+@define-color cyan              #6a6358;
+@define-color white             #454138;
+
+/* Bright variants */
+@define-color bright_red        #8b2020;
+@define-color bright_green      #5a5248;
+@define-color bright_yellow     #7a6a3a;
+@define-color bright_blue       #454138;
+@define-color bright_magenta    #5a5248;
+@define-color bright_cyan       #6a6358;
+@define-color bright_white      #1a1814;
+
+/* Accent system */
+@define-color accent_bg_color   @blue;
+@define-color accent_fg_color   @background;
+@define-color accent_color      @blue;
+
+/* Window */
+@define-color window_bg_color   @background;
+@define-color window_fg_color   @foreground;
+
+/* Views / sidebars */
+@define-color view_bg_color     #ccc8b1;
+@define-color view_fg_color     @foreground;
+
+@define-color sidebar_bg_color  #c8c4ae;
+@define-color sidebar_fg_color  @foreground;
+@define-color sidebar_backdrop_color #c8c4ae;
+@define-color sidebar_shade_color    #c8c4ae;
+
+/* Headerbar */
+@define-color headerbar_bg_color       #d1cdb7;
+@define-color headerbar_fg_color       @foreground;
+@define-color headerbar_backdrop_color #c8c4ae;
+@define-color headerbar_shade_color    #c8c4ae;
+
+/* Cards / popovers */
+@define-color card_bg_color     #dcd8c0;
+@define-color card_fg_color     @foreground;
+
+@define-color popover_bg_color  #dcd8c0;
+@define-color popover_fg_color  @foreground;
+
+/* Dialogs */
+@define-color dialog_bg_color   #dcd8c0;
+@define-color dialog_fg_color   @foreground;
+
+/* States */
+@define-color destructive_bg_color @red;
+@define-color destructive_fg_color @background;
+
+@define-color success_bg_color  @green;
+@define-color success_fg_color  @background;
+
+@define-color warning_bg_color  @yellow;
+@define-color warning_fg_color  @background;
+
+@define-color error_bg_color    @red;
+@define-color error_fg_color    @background;
+
+/* Borders */
+@define-color borders alpha(@foreground, 0.15);
+
+/* GTK legacy mappings */
+@define-color theme_fg_color            @foreground;
+@define-color theme_text_color          @foreground;
+@define-color theme_bg_color            @background;
+@define-color theme_base_color          #ccc8b1;
+
+@define-color theme_selected_bg_color   @blue;
+@define-color theme_selected_fg_color   @background;
+
+@define-color insensitive_bg_color      @background;
+@define-color insensitive_fg_color      #bab5a1;
+@define-color insensitive_base_color    #ccc8b1;
+
+/* Unfocused */
+@define-color theme_unfocused_fg_color  @foreground;
+@define-color theme_unfocused_bg_color  @background;
+@define-color theme_unfocused_base_color #ccc8b1;
+@define-color unfocused_borders alpha(@foreground, 0.08);
+
+/* Content */
+@define-color content_view_bg #ccc8b1;
+@define-color text_view_bg    #dcd8c0;
+
+/* ================================
+   Widgets
+   ================================ */
+
+/* Grid background on main window */
+window {
+    background-image:
+        linear-gradient(to right, rgba(204,200,177,0.8) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(204,200,177,0.8) 1px, transparent 1px);
+    background-size: 6px 6px;
+}
+
+messagedialog {
+    background-color: @dialog_bg_color;
+}
+
+messagedialog label {
+    color: @dialog_fg_color;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+messagedialog .secondary-text {
+    font-size: 10pt;
+    font-style: italic;
+}
+
+messagedialog button {
+    background-color: #dcd8c0;
+    color: @foreground;
+    border: 1px solid @bright_black;
+    padding: 10px;
+}
+
+messagedialog button:hover {
+    background-color: @foreground;
+    color: @background;
+}
+
+banner revealer widget {
+    background: #c8c4ae;
+    padding: 5px;
+    color: @foreground;
+}
+
+toast {
+    background-color: #dcd8c0;
+    color: @foreground;
+}
+
+toast button.circular.flat.image-button:hover {
+    background-color: @red;
+    color: @background;
+}
+
+/* Icon tuning (YoRHa light) */
+.svg-icon {
+    filter: sepia(30%) saturate(200%)
+            hue-rotate(10deg) brightness(60%) contrast(110%);
+}

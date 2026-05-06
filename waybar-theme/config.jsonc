@@ -1,0 +1,128 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+  "spacing": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    //"hyprland/window",
+    "mpris",
+  ],
+  "modules-center": ["custom/ticker"],
+  "modules-right": [
+    //"custom/player",
+    "tray",
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "cpu",
+    //"memory",
+    "backlight",
+    "battery",
+    "custom/control",
+    "clock",
+  ],
+  "tray": {
+    //"icon-size": 14,
+    "spacing": 8,
+  },
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate",
+  },
+
+  "hyprland/window": {
+    "format": "// {title}",
+    "max-length": 30,
+  },
+
+  "cpu": {
+    "format": "CPU {usage}%",
+    "interval": 3,
+    "on-click": "omarchy-launch-or-focus-tui btop",
+  },
+
+  "memory": {
+    "format": "MEM {percentage}%",
+    "interval": 3,
+    "on-click": "omarchy-launch-or-focus-tui btop",
+  },
+
+  "network": {
+    "format-wifi": "NET {essid}",
+    "format-ethernet": "ETH {ifname}",
+    "format-disconnected": "NET --",
+    "tooltip-format": "{ipaddr}",
+    "on-click": "omarchy-launch-wifi",
+  },
+  "bluetooth": {
+    "format": "BLU {status}",
+    "format-connected": "BLU {num_connections}",
+    "format-disabled": "",
+    "on-click": "omarchy-launch-bluetooth",
+    "tooltip-format": "ACTIVE : {device_alias}",
+  },
+
+  "pulseaudio": {
+    "format": "VOL {volume}%",
+    "format-muted": "VOL --",
+    "format-bluetooth": "BT {volume}%",
+    "format-bluetooth-muted": "BT --",
+    "format-source": "MIC {volume}%",
+    "on-click": "omarchy-launch-or-focus-tui wiremix",
+    "on-click-right": "pamixer -t",
+  },
+
+  "battery": {
+    "interval": 5,
+    "format": "BAT {capacity}%",
+    "format-critical": "LOW {capacity}%",
+    "format-warning": "MID {capacity}%",
+    "format-charging": "CHA {capacity}%",
+    "format-plugged": "PLU {capacity}%",
+    "format-alt": "{time}",
+    "tooltip": false,
+  },
+
+  "backlight": {
+    "format": "BRI {percent}%",
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%Y/%m/%d}",
+    "tooltip-format": "{:%A %d %B %Y}",
+  },
+
+  "custom/ticker": {
+    "exec": "echo 'यन्त्र·सक्रिय // SCANNING // बलिदान परमो धर्म: // SYS:ACTIVE // सर्व प्रणाली सामान्य // NR-2B@ARCH //'",
+    // "exec": "echo 'यन्त्र · सक्रिय// SCANNING // データ処// SYS:ACTIVE // NR-2B@ARCH // 全システム正常 // 起動完了 //'",
+    "interval": 60,
+    "format": "{}",
+  },
+
+  "custom/control": {
+    "format": "⏻",
+    "on-click": "qs ipc call ctrl toggle",
+    "tooltip": "Control Center",
+  },
+  "custom/player": {
+    "exec": "playerctl metadata --format '{{ artist }} // {{ title }}' 2>/dev/null || echo ''",
+    "interval": 2,
+    "format": "{}",
+    "on-click": "echo t >> /tmp/qs-toggle",
+    "on-click-right": "echo t >> /tmp/qs-front",
+    "max-length": 40,
+  },
+  "mpris": {
+    "format": "{artist} // {title}",
+    "format-paused": " {artist} // {title}",
+    "format-stopped": "",
+    "on-click": "playerctl previous",
+    "on-click-middle": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "scroll-step": 5.0,
+    "max-length": 25,
+  },
+}

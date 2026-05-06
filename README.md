@@ -1,6 +1,6 @@
 # NieR-Light — Omarchy Theme
 
-A light theme for [Omarchy](https://omarchy.org) inspired by the canonical YoRHa CSS design language from NieR: Automata. Clean parchment tones, ink typography, and subtle grid texture across all surfaces.
+A light theme for [Omarchy](https://omarchy.org) inspired from NieR: Automata. Clean parchment tones, ink typography, and subtle grid texture across all surfaces.
 
 ![Preview](preview.png)
 

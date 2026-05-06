@@ -4,6 +4,26 @@ A light theme for [Omarchy](https://omarchy.org) inspired from NieR: Automata. C
 
 ![Preview](preview.png)
 
+## Installation
+
+Install via the Omarchy menu (`Super + Alt + Space`) → Install → Style → Theme, paste the GitHub URL:
+
+```
+https://github.com/krish561/Omarchy-nier-theme
+```
+
+Or via CLI:
+
+```bash
+omarchy theme install https://github.com/krish561/Omarchy-nier-theme
+```
+
+To remove:
+
+```bash
+omarchy theme remove Omarchy-nier-theme
+```
+
 ## Palette
 
 | Role | Hex |
@@ -19,7 +39,7 @@ A light theme for [Omarchy](https://omarchy.org) inspired from NieR: Automata. C
 - Waybar with grid texture background and YoRHa ink palette
 - Hyprlock lockscreen
 - Walker launcher with parchment grid background
-- Full palette across ghostty, btop, neovim (Kanagawa Lotus), swayosd, gtk
+- Full palette across ghostty, btop, neovim , swayosd, gtk
 - Fish shell and fzf colors
 
 ## Font
@@ -30,7 +50,7 @@ For monospace components, font follows your Omarchy font setting — change with
 
 ## Terminal Greeting
 
-A NieR-styled terminal greeting is included at `quickshell/nier-welcome.sh`. It displays an ASCII art header, system info, and the Sanskrit phrase `बलिदान परमो धर्म: · glory to mankind`.
+A NieR-styled terminal greeting is included at `nier-welcome.sh`. It displays an ASCII art header, system info, and a phrase.
 
 **Fish shell only.** Add to `~/.config/fish/config.fish`:
 
@@ -44,6 +64,5 @@ Requires `figlet` for the ASCII art header (`yay -S figlet`). Without it the gre
 
 ## Credits
 
-- [samyns/Unit-3](https://github.com/samyns/Unit-3) — Quickshell widgets, NieR UI components, and original rice this theme is based on
-- [metakirby5/yorha](https://github.com/metakirby5/yorha) — Canonical NieR: Automata CSS design language and color palette
+Inspired by [samyns/Unit-3](https://github.com/samyns/Unit-3).
 

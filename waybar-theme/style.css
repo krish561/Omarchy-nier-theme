@@ -17,6 +17,20 @@ window#waybar {
   color: #454138;
 }
 
+/* TOOLTIPS */
+tooltip {
+  background: rgba(11, 10, 9, 0.96);
+  border: 1px solid rgba(200, 184, 154, 0.12);
+  padding: 8px;
+}
+
+tooltip label {
+  color: rgba(200, 184, 154, 0.72);
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
 /* WORKSPACES */
 #workspaces button {
   padding: 0 8px;
@@ -55,6 +69,7 @@ window#waybar {
 #pulseaudio,
 #backlight,
 #cpu,
+#tray,
 #battery,
 #custom-control,
 #clock {
@@ -62,6 +77,18 @@ window#waybar {
   color: rgba(69, 65, 56, 0.6);
   border-left: 1px solid rgba(69, 65, 56, 0.12);
   letter-spacing: 1px;
+}
+
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#cpu:hover,
+#clock:hover,
+#battery:hover,
+#backlight:hover,
+#tray:hover {
+  background: rgba(200, 184, 154, 0.04);
+  color: #c8b89a;
 }
 
 #clock {

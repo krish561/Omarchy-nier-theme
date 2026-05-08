@@ -24,7 +24,7 @@
   ],
   "tray": {
     //"icon-size": 14,
-    "spacing": 8,
+    "spacing": 6,
   },
   "hyprland/workspaces": {
     "format": "{id}",
@@ -92,14 +92,24 @@
   "clock": {
     "format": "{:%H:%M}",
     "format-alt": "{:%Y/%m/%d}",
-    "tooltip-format": "{:%A %d %B %Y}",
+    "tooltip": false,
   },
 
+  /*
   "custom/ticker": {
     "exec": "echo 'यन्त्र·सक्रिय // SCANNING // बलिदान परमो धर्म: // SYS:ACTIVE // सर्व प्रणाली सामान्य // NR-2B@ARCH //'",
     // "exec": "echo 'यन्त्र · सक्रिय// SCANNING // データ処// SYS:ACTIVE // NR-2B@ARCH // 全システム正常 // 起動完了 //'",
     "interval": 60,
     "format": "{}",
+  },
+  */
+
+  "custom/ticker": {
+    "exec": "bash -c 'WIDTH=$(hyprctl monitors -j | jq \".[0].width\"); USER_NAME=$(whoami | tr \"[:lower:]\" \"[:upper:]\"); HOST=$(hostname); KERNEL=$(uname -r | cut -d\"-\" -f1); STATE_FILE=/tmp/waybar-ticker-mode; [[ ! -f $STATE_FILE ]] && echo default > $STATE_FILE; MODE=$(cat $STATE_FILE); if omarchy-update-available >/dev/null 2>&1; then UPDATE_STATUS=\"OMARCHY UPDATE AVAILABLE\"; else UPDATE_STATUS=\"ALL SYSTEMS CURRENT\"; fi; if [[ \"$MODE\" == \"alt\" ]]; then if [[ $WIDTH -lt 1600 ]]; then echo \"USR:$USER_NAME ▸ $UPDATE_STATUS ▸\"; else echo \"USER:$USER_NAME ▸ HOST:$HOST ▸ KERN:$KERNEL ▸ $UPDATE_STATUS ▸\"; fi; else if [[ $WIDTH -lt 1600 ]]; then echo \"SYS:ACTIVE ▸ SCANNING ▸ NR-2B@ARCH ▸\"; else echo \"// यन्त्र·सक्रिय // SCANNING // बलिदान परमो धर्म: // SYS:ACTIVE // सर्व प्रणाली सामान्य // NR-2B@ARCH //\"; fi; fi'",
+    "interval": 60,
+    "format": "{}",
+    "tooltip": false,
+    "on-click": "bash -c 'STATE_FILE=/tmp/waybar-ticker-mode; [[ ! -f $STATE_FILE ]] && echo default > $STATE_FILE; MODE=$(cat $STATE_FILE); if [[ \"$MODE\" == \"default\" ]]; then echo alt > $STATE_FILE; else echo default > $STATE_FILE; fi'",
   },
 
   "custom/control": {
